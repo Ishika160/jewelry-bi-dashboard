@@ -1,0 +1,197 @@
+/**
+ * Print-Ready Report Styles
+ * Formats pages for clean A4 printing
+ */
+
+@media print {
+    /* Hide non-essential UI */
+    .sidebar,
+    header,
+    #sidebarToggle,
+    #themeToggle,
+    .dropdown,
+    .btn,
+    .nav-tabs,
+    .no-print,
+    .search-wrapper,
+    .notification-dropdown,
+    footer,
+    .toast-container {
+        display: none !important;
+    }
+
+    /* Full width content */
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 11pt;
+        line-height: 1.5;
+    }
+
+    .d-flex.w-100.min-vh-100 {
+        display: block !important;
+    }
+
+    .flex-grow-1 {
+        width: 100% !important;
+    }
+
+    .p-4 {
+        padding: 0 !important;
+    }
+
+    /* Print Header */
+    .print-header {
+        display: block !important;
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+    }
+
+    .print-header h2 {
+        margin: 0;
+        font-size: 18pt;
+        font-weight: 700;
+    }
+
+    .print-header p {
+        margin: 4px 0 0;
+        font-size: 10pt;
+        color: #555;
+    }
+
+    /* Cards */
+    .card {
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+        background: #fff !important;
+        page-break-inside: avoid;
+        margin-bottom: 16px;
+    }
+
+    .card-header {
+        background: #f5f5f5 !important;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .glass {
+        background: #fff !important;
+        backdrop-filter: none !important;
+        border: 1px solid #ddd !important;
+    }
+
+    /* Tables */
+    .table {
+        border-collapse: collapse !important;
+    }
+
+    .table th,
+    .table td {
+        border: 1px solid #ccc !important;
+        padding: 8px !important;
+        color: #000 !important;
+        background: #fff !important;
+    }
+
+    .table thead th {
+        background: #f0f0f0 !important;
+        font-weight: 700;
+    }
+
+    .table-hover tbody tr:hover {
+        background: none !important;
+    }
+
+    /* Badges for print */
+    .badge {
+        border: 1px solid #999;
+        color: #000 !important;
+        background: #f5f5f5 !important;
+        padding: 2px 6px;
+        font-weight: 600;
+    }
+
+    /* KPI Cards */
+    .col-12.col-md-4,
+    .col-12.col-xl-2 {
+        break-inside: avoid;
+    }
+
+    /* Charts — show a placeholder message */
+    canvas {
+        display: none !important;
+    }
+
+    .chart-print-placeholder {
+        display: block !important;
+        text-align: center;
+        padding: 40px;
+        background: #f9f9f9;
+        border: 1px dashed #ccc;
+        color: #999;
+        font-style: italic;
+    }
+
+    /* Page settings */
+    @page {
+        margin: 1.5cm;
+        size: A4;
+    }
+
+    /* Page break controls */
+    h4, h5 {
+        page-break-after: avoid;
+    }
+
+    .row {
+        page-break-inside: avoid;
+    }
+
+    /* Links */
+    a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
+    /* Force text colors for print */
+    .text-muted {
+        color: #666 !important;
+    }
+
+    .text-primary {
+        color: #b8860b !important;
+    }
+
+    .text-success {
+        color: #198754 !important;
+    }
+
+    .text-danger {
+        color: #dc3545 !important;
+    }
+
+    .text-warning {
+        color: #cc8800 !important;
+    }
+
+    /* Print footer */
+    .print-footer {
+        display: block !important;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* Hide print elements on screen */
+@media screen {
+    .print-header,
+    .print-footer,
+    .chart-print-placeholder {
+        display: none !important;
+    }
+}

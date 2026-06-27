@@ -1,0 +1,37 @@
+:root {
+    /* Primary Colors - Premium Gold */
+    --bs-primary: #d4af37;
+    --bs-primary-rgb: 212, 175, 55;
+    
+    /* Default (Light Mode) */
+    --bs-body-bg: #f8f9fa;
+    --bs-surface: #ffffff;
+    --bs-body-color: #000000;
+    --bs-text-muted: #1a1a1a;
+    --bs-glass-bg: rgba(255, 255, 255, 0.7);
+    --bs-glass-border: rgba(0, 0, 0, 0.3);
+    
+    /* Chart Colors */
+    --chart-1: #d4af37;
+    --chart-2: #38bdf8;
+    --chart-3: #2dd4bf;
+    --chart-4: #a78bfa;
+    --chart-5: #f472b6;
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #000000;
+    --bs-surface: #111111;
+    --bs-body-color: #f8fafc;
+    --bs-text-muted: #94a3b8;
+    --bs-glass-bg: rgba(17, 17, 17, 0.7);
+    --bs-glass-border: rgba(255, 255, 255, 0.05);
+}
+
+.bg-surface {
+    background-color: var(--bs-surface) !important;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
