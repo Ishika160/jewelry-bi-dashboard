@@ -30,7 +30,7 @@ async function loadSalesData(action = 'overview') {
             // Only show full loader on initial load or manual refresh
         }
         
-        const response = await fetch(`/api/sales.php?action=${action}`);
+        const response = await fetch(window.APP_URL + `api/sales.php?action=${action}`);
         const result = await response.json();
         
         if (!result.success) throw new Error(result.message);

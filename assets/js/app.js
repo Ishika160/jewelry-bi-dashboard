@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         logoutLink.addEventListener('click', async (e) => {
             e.preventDefault();
             try {
-                await fetch('/api/auth.php?action=logout');
+                await fetch(window.APP_URL + 'api/auth.php?action=logout');
             } catch (err) {
                 // Proceed to redirect even if fetch fails
             }

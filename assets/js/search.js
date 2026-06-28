@@ -78,7 +78,7 @@ async function performSearch(query) {
     const searchResults = document.getElementById('searchResults');
 
     try {
-        const res = await fetch(`/api/search.php?q=${encodeURIComponent(query)}`);
+        const res = await fetch(window.APP_URL + `api/search.php?q=${encodeURIComponent(query)}`);
         const data = await res.json();
 
         if (!data.success || data.results.length === 0) {

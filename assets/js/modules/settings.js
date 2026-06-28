@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ── Load Users ──
 async function loadUsers() {
     try {
-        const res = await fetch('/api/settings.php?action=users');
+        const res = await fetch(window.APP_URL + 'api/settings.php?action=users');
         const data = await res.json();
         
         if (!data.success) return;
@@ -128,7 +128,7 @@ async function toggleUser(userId) {
 // ── Load System Info ──
 async function loadSystemInfo() {
     try {
-        const res = await fetch('/api/settings.php?action=system_info');
+        const res = await fetch(window.APP_URL + 'api/settings.php?action=system_info');
         const data = await res.json();
         if (!data.success) return;
 
@@ -184,7 +184,7 @@ async function loadSystemInfo() {
 // ── Load Activity Log ──
 async function loadActivityLog() {
     try {
-        const res = await fetch('/api/notifications.php?action=list');
+        const res = await fetch(window.APP_URL + 'api/notifications.php?action=list');
         const data = await res.json();
         
         const activityItems = data.notifications?.filter(n => n.type === 'info') || [];

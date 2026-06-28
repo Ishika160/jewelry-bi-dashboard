@@ -16,7 +16,7 @@ async function loadNotifications() {
     if (!badge || !list) return;
 
     try {
-        const res = await fetch('/api/notifications.php?action=list');
+        const res = await fetch(window.APP_URL + 'api/notifications.php?action=list');
         const data = await res.json();
 
         if (!data.success) {
@@ -77,7 +77,7 @@ async function loadNotifications() {
             <li><hr class="dropdown-divider my-1"></li>
             <li>
                 <div class="d-flex justify-content-between px-3 py-2">
-                    <a href="/modules/inventory/" class="small text-primary text-decoration-none">View Inventory</a>
+                    <a href="${window.APP_URL}modules/inventory/" class="small text-primary text-decoration-none">View Inventory</a>
                     <button class="btn btn-sm btn-link text-muted p-0 small" onclick="clearAllNotifs()">Clear All</button>
                 </div>
             </li>

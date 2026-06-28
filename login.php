@@ -411,7 +411,7 @@ if (isLoggedIn()) {
 
         <div class="text-center mt-3">
             <span style="color: #6b7280; font-size: 0.875rem;">Don't have an account?</span>
-            <a href="/register.php" style="color: #d4af37; text-decoration: none; font-weight: 600; font-size: 0.875rem; margin-left: 4px;">Register</a>
+            <a href="<?= APP_URL ?>register.php" style="color: #d4af37; text-decoration: none; font-weight: 600; font-size: 0.875rem; margin-left: 4px;">Register</a>
         </div>
 
         <div class="login-footer">

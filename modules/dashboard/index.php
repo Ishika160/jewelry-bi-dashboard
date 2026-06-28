@@ -150,7 +150,7 @@ require_once '../../includes/sidebar.php';
                 <div class="card border-0 shadow-sm h-100">
                     <div class="card-header bg-transparent  p-4 d-flex justify-content-between align-items-center">
                         <h5 class="fw-bold mb-0">Recent Sales</h5>
-                        <a href="/modules/sales/" class="btn btn-sm btn-outline-primary">View All</a>
+                        <a href="<?= APP_URL ?>modules/sales/" class="btn btn-sm btn-outline-primary">View All</a>
                     </div>
                     <div class="card-body p-0">
                         <div class="table-responsive">

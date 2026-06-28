@@ -321,7 +321,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <i class="bi bi-check-circle-fill text-success fs-1 d-block mb-3"></i>
                 <h5 class="fw-bold text-success">Registration Successful!</h5>
                 <p class="text-muted mb-3">Your account is ready. You can now sign in.</p>
-                <a href="/login.php" class="btn btn-setup">
+                <a href="<?= APP_URL ?>login.php" class="btn btn-setup">
                     <i class="bi bi-box-arrow-in-right me-2"></i>Go to Login
                 </a>
             </div>
@@ -375,7 +375,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="text-center mt-3">
                 <span style="color: #6b7280; font-size: 0.875rem;">Already have an account?</span>
-                <a href="/login.php" class="register-link" style="margin-left: 4px;">Sign In</a>
+                <a href="<?= APP_URL ?>login.php" class="register-link" style="margin-left: 4px;">Sign In</a>
             </div>
         <?php endif; ?>
 

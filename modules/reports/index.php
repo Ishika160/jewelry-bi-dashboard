@@ -77,25 +77,25 @@ require_once '../../includes/sidebar.php';
                     <p class="text-muted mb-3">Print any module's current view directly from the browser. Navigate to the page and use the print button.</p>
                     <div class="row g-3">
                         <div class="col-6 col-md-3">
-                            <a href="/modules/dashboard/" class="btn btn-outline-secondary w-100 py-3">
+                            <a href="<?= APP_URL ?>modules/dashboard/" class="btn btn-outline-secondary w-100 py-3">
                                 <i class="bi bi-speedometer2 d-block fs-3 mb-1"></i>
                                 <small>Dashboard</small>
                             </a>
                         </div>
                         <div class="col-6 col-md-3">
-                            <a href="/modules/sales/" class="btn btn-outline-secondary w-100 py-3">
+                            <a href="<?= APP_URL ?>modules/sales/" class="btn btn-outline-secondary w-100 py-3">
                                 <i class="bi bi-graph-up d-block fs-3 mb-1"></i>
                                 <small>Sales</small>
                             </a>
                         </div>
                         <div class="col-6 col-md-3">
-                            <a href="/modules/inventory/" class="btn btn-outline-secondary w-100 py-3">
+                            <a href="<?= APP_URL ?>modules/inventory/" class="btn btn-outline-secondary w-100 py-3">
                                 <i class="bi bi-box-seam d-block fs-3 mb-1"></i>
                                 <small>Inventory</small>
                             </a>
                         </div>
                         <div class="col-6 col-md-3">
-                            <a href="/modules/customers/" class="btn btn-outline-secondary w-100 py-3">
+                            <a href="<?= APP_URL ?>modules/customers/" class="btn btn-outline-secondary w-100 py-3">
                                 <i class="bi bi-people d-block fs-3 mb-1"></i>
                                 <small>Customers</small>
                             </a>

@@ -16,7 +16,7 @@ $avatarInitial = strtoupper(substr($userName, 0, 1));
     <div class="p-3">
         <ul class="nav nav-pills flex-column gap-2">
             <li class="nav-item">
-                <a href="/modules/dashboard/" class="nav-link text-body <?= strpos($currentPage, '/modules/dashboard') !== false ? 'active' : '' ?>">
+                <a href="<?= APP_URL ?>modules/dashboard/" class="nav-link text-body <?= strpos($currentPage, '/modules/dashboard') !== false ? 'active' : '' ?>">
                     <i class="bi bi-speedometer2 me-2"></i> <span class="d-none d-md-inline">Dashboard</span>
                 </a>
             </li>
@@ -25,12 +25,12 @@ $avatarInitial = strtoupper(substr($userName, 0, 1));
                 <small class="text-muted fw-bold px-3 d-none d-md-block text-uppercase">Advanced BI</small>
             </li>
             <li class="nav-item">
-                <a href="/modules/predictions/" class="nav-link text-warning fw-semibold <?= strpos($currentPage, '/modules/predictions') !== false ? 'active' : '' ?>">
+                <a href="<?= APP_URL ?>modules/predictions/" class="nav-link text-warning fw-semibold <?= strpos($currentPage, '/modules/predictions') !== false ? 'active' : '' ?>">
                     <i class="bi bi-robot me-2"></i> <span class="d-none d-md-inline">AI Predictions</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/modules/analytics/" class="nav-link text-body <?= strpos($currentPage, '/modules/analytics') !== false ? 'active' : '' ?>">
+                <a href="<?= APP_URL ?>modules/analytics/" class="nav-link text-body <?= strpos($currentPage, '/modules/analytics') !== false ? 'active' : '' ?>">
                     <i class="bi bi-grid-3x3-gap me-2"></i> <span class="d-none d-md-inline">Heatmaps</span>
                 </a>
             </li>
@@ -39,17 +39,17 @@ $avatarInitial = strtoupper(substr($userName, 0, 1));
                 <small class="text-muted fw-bold px-3 d-none d-md-block text-uppercase">Core Modules</small>
             </li>
             <li class="nav-item">
-                <a href="/modules/sales/" class="nav-link text-body <?= strpos($currentPage, '/modules/sales') !== false ? 'active' : '' ?>">
+                <a href="<?= APP_URL ?>modules/sales/" class="nav-link text-body <?= strpos($currentPage, '/modules/sales') !== false ? 'active' : '' ?>">
                     <i class="bi bi-graph-up me-2"></i> <span class="d-none d-md-inline">Sales Analytics</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/modules/inventory/" class="nav-link text-body <?= strpos($currentPage, '/modules/inventory') !== false ? 'active' : '' ?>">
+                <a href="<?= APP_URL ?>modules/inventory/" class="nav-link text-body <?= strpos($currentPage, '/modules/inventory') !== false ? 'active' : '' ?>">
                     <i class="bi bi-box-seam me-2"></i> <span class="d-none d-md-inline">Inventory</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/modules/customers/" class="nav-link text-body <?= strpos($currentPage, '/modules/customers') !== false ? 'active' : '' ?>">
+                <a href="<?= APP_URL ?>modules/customers/" class="nav-link text-body <?= strpos($currentPage, '/modules/customers') !== false ? 'active' : '' ?>">
                     <i class="bi bi-people me-2"></i> <span class="d-none d-md-inline">Customers</span>
                 </a>
             </li>
@@ -58,12 +58,12 @@ $avatarInitial = strtoupper(substr($userName, 0, 1));
                 <small class="text-muted fw-bold px-3 d-none d-md-block text-uppercase">Actions</small>
             </li>
             <li class="nav-item">
-                <a href="/modules/inventory/#restock" class="nav-link text-body <?= strpos($currentPage, '/restock') !== false ? 'active' : '' ?>">
+                <a href="<?= APP_URL ?>modules/inventory/#restock" class="nav-link text-body <?= strpos($currentPage, '/restock') !== false ? 'active' : '' ?>">
                     <i class="bi bi-arrow-repeat me-2"></i> <span class="d-none d-md-inline">Restock Alerts</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/modules/reports/" class="nav-link text-body <?= strpos($currentPage, '/modules/reports') !== false ? 'active' : '' ?>">
+                <a href="<?= APP_URL ?>modules/reports/" class="nav-link text-body <?= strpos($currentPage, '/modules/reports') !== false ? 'active' : '' ?>">
                     <i class="bi bi-file-earmark-text me-2"></i> <span class="d-none d-md-inline">Reports</span>
                 </a>
             </li>
@@ -130,7 +130,7 @@ $avatarInitial = strtoupper(substr($userName, 0, 1));
                         <small class="text-muted"><?= $userRole ?></small>
                     </li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="/modules/settings/"><i class="bi bi-gear me-2"></i>Settings</a></li>
+                    <li><a class="dropdown-item" href="<?= APP_URL ?>modules/settings/"><i class="bi bi-gear me-2"></i>Settings</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item text-danger" href="#" id="logoutLink"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
                 </ul>

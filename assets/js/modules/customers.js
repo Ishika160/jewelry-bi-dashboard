@@ -13,7 +13,7 @@ async function loadCustomerData() {
     const content = document.getElementById('customerContent');
     
     try {
-        const response = await fetch(`/api/customers.php`);
+        const response = await fetch(window.APP_URL + `api/customers.php`);
         const result = await response.json();
         
         if (!result.success) throw new Error(result.message);

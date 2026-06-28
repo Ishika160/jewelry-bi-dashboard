@@ -10,7 +10,7 @@ async function loadPredictions() {
     const tbody = document.getElementById('predictionsTable');
     
     try {
-        const response = await fetch('/api/predictions.php');
+        const response = await fetch(window.APP_URL + 'api/predictions.php');
         const result = await response.json();
         
         if (!result.success) throw new Error(result.message);

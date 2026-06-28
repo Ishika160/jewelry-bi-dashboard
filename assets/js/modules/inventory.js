@@ -44,7 +44,7 @@ async function loadInventoryData(action = currentTab) {
             // initial load
         }
         
-        const response = await fetch(`/api/inventory.php?action=${action}`);
+        const response = await fetch(window.APP_URL + `api/inventory.php?action=${action}`);
         const result = await response.json();
         
         if (!result.success) throw new Error(result.message);

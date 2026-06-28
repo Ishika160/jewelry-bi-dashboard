@@ -21,7 +21,7 @@ async function loadDashboardData() {
         content.classList.add('d-none');
         
         // Fetch data
-        const response = await fetch('/api/dashboard.php');
+        const response = await fetch(window.APP_URL + 'api/dashboard.php');
         const result = await response.json();
         
         if (!result.success) throw new Error(result.message);

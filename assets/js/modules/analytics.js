@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadHeatmap() {
     try {
-        const response = await fetch('/api/analytics.php');
+        const response = await fetch(window.APP_URL + 'api/analytics.php');
         const result = await response.json();
         
         if (!result.success) throw new Error(result.message);
