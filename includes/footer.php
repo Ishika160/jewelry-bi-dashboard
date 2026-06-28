@@ -22,7 +22,7 @@
 
 <!-- Module Specific Scripts -->
 <?php if(isset($extra_js)): ?>
-    <script src="<?= $extra_js ?>"></script>
+    <script src="<?= APP_URL . ltrim($extra_js, '/') ?>"></script>
 <?php endif; ?>
 
 </body>

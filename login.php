@@ -464,7 +464,7 @@ if (isLoggedIn()) {
                     // Success — redirect with a small delay for UX
                     loginBtn.querySelector('.btn-loading').innerHTML = '<i class="bi bi-check-circle me-2"></i>Success! Redirecting...';
                     setTimeout(() => {
-                        window.location.href = data.redirect || '/modules/dashboard/';
+                        window.location.href = data.redirect || '<?= APP_URL ?>modules/dashboard/';
                     }, 500);
                 } else {
                     // Error

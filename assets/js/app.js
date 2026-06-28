@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (err) {
                 // Proceed to redirect even if fetch fails
             }
-            window.location.href = '/login.php';
+            window.location.href = window.APP_URL + 'login.php';
         });
     }
 });

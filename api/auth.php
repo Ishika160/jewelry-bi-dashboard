@@ -51,7 +51,7 @@ function handleLogin(): void {
         echo json_encode([
             'success' => true,
             'message' => 'Login successful',
-            'redirect' => '/modules/dashboard/',
+            'redirect' => APP_URL . 'modules/dashboard/',
             'user' => getCurrentUser()
         ]);
     } else {
@@ -63,7 +63,7 @@ function handleLogin(): void {
 function handleLogout(): void {
     global $pdo;
     logoutUser($pdo);
-    echo json_encode(['success' => true, 'message' => 'Logged out successfully', 'redirect' => '/login.php']);
+    echo json_encode(['success' => true, 'message' => 'Logged out successfully', 'redirect' => APP_URL . 'login.php']);
 }
 
 function handleCheck(): void {
