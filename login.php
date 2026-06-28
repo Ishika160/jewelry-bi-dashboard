@@ -8,7 +8,7 @@ require_once 'includes/auth.php';
 
 // If already logged in, redirect to dashboard
 if (isLoggedIn()) {
-    header('Location: /modules/dashboard/');
+    header('Location: ' . APP_URL . 'modules/dashboard/');
     exit;
 }
 ?>

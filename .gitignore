@@ -40,3 +40,5 @@ __pycache__/
 .venv/
 venv/
 env/
+
+database_export.sql

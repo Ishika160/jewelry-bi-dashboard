@@ -45,7 +45,7 @@ function requireLogin(): void {
             exit;
         }
         // Otherwise redirect to login page
-        header('Location: /login.php');
+        header('Location: ' . APP_URL . 'login.php');
         exit;
     }
 }

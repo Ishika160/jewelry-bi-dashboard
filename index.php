@@ -7,7 +7,7 @@ require_once 'includes/auth.php';
 
 // If logged in, go to dashboard
 if (isLoggedIn()) {
-    header('Location: /modules/dashboard/');
+    header('Location: ' . APP_URL . 'modules/dashboard/');
     exit;
 }
 
@@ -27,14 +27,14 @@ try {
         $tableExists = true;
     } catch (Exception $e) {
         // Table doesn't exist — redirect to setup
-        header('Location: /register.php');
+        header('Location: ' . APP_URL . 'register.php');
         exit;
     }
 
     if ($tableExists) {
         $stmt = $pdo->query("SELECT COUNT(*) FROM users");
         if ((int)$stmt->fetchColumn() === 0) {
-            header('Location: /register.php');
+            header('Location: ' . APP_URL . 'register.php');
             exit;
         }
     }
@@ -43,5 +43,5 @@ try {
 }
 
 // Users exist, redirect to login
-header('Location: /login.php');
+header('Location: ' . APP_URL . 'login.php');
 exit;
