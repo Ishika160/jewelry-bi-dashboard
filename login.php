@@ -452,7 +452,7 @@ if (isLoggedIn()) {
             const password = document.getElementById('password').value;
 
             try {
-                const response = await fetch('/api/auth.php?action=login', {
+                const response = await fetch('<?= APP_URL ?>api/auth.php?action=login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, password })

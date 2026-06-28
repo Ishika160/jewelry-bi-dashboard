@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             email: document.getElementById('settingsEmail').value
         };
 
-        const res = await apiPost('/api/settings.php?action=update_profile', data);
+        const res = await apiPost(window.APP_URL + 'api/settings.php?action=update_profile', data);
         showToast('profileToast', res.message, res.success);
 
         if (res.success) {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             confirm_password: document.getElementById('confirmPassword').value
         };
 
-        const res = await apiPost('/api/settings.php?action=change_password', data);
+        const res = await apiPost(window.APP_URL + 'api/settings.php?action=change_password', data);
         showToast('passwordToast', res.message, res.success);
 
         if (res.success) {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             role: document.getElementById('newRole').value
         };
 
-        const res = await apiPost('/api/settings.php?action=create_user', data);
+        const res = await apiPost(window.APP_URL + 'api/settings.php?action=create_user', data);
         showToast('createUserToast', res.message, res.success);
 
         if (res.success) {
@@ -121,7 +121,7 @@ async function loadUsers() {
 async function toggleUser(userId) {
     if (!confirm('Are you sure you want to change this user\'s status?')) return;
     
-    const res = await apiPost('/api/settings.php?action=toggle_user', { user_id: userId });
+    const res = await apiPost(window.APP_URL + 'api/settings.php?action=toggle_user', { user_id: userId });
     if (res.success) loadUsers();
 }
 
